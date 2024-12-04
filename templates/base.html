@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load static %}
 {% load static tailwind_tags %}
 <html lang="en">
 <head>
@@ -8,15 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock title %}</title>
 </head>
-<body>
+<body class="container mx-auto">
     <nav>
-        
+        <div class="flex justify-between shadow-lg py-2 bg-blue-100 sm:rounded-full my-1">
+            <ul class="left flex space-x-2 ml-3 items-center">
+                <li>Home</li>
+                <li>Reviews</li>
+                <li>About</li>
+            </ul>
+            <ul class="right flex space-x-2 mr-3 items-center">
+                <li>Content</li>
+                <li>Content</li>
+                <li><img class="rounded-full ring-2 size-10 hover:ring-4" src="{% static "img/profile.jpeg" %}" alt="Image"></li>
+            </ul>
+        </div>
     </nav>
 
     {% block content %}{% endblock content %}
     
     <footer>
-
-    </footer>
+        <div style="background-color: rgba(14, 18, 61, 1.0);" class="container w-full flex justify-between py-10 sm:rounded-t-lg absolute bottom-0">
+            <ul class="left">
+    
+            </ul>
+            <ul class="mid">
+    
+            </ul>
+            <ul class="right">
+    
+            </ul>
+        </div>
+    </footer>    
 </body>
 </html>
